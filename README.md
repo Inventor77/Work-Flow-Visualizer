@@ -8,7 +8,7 @@
 
 ## INTRODUCTION
 
-This project provides a editor in which a user can make different types of graphs and save them and also edit them later.
+This project provides a editor in which a user can make different types of Nodes and join them using edges resulting graphs and save them and also edit them later.
 
 User can also create their custom node according to his/her requirements.
 
