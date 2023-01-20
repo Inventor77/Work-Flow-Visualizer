@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaFolderPlus, FaBuffer, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { readData } from "../temp/src/utils/utils";
+import { readData } from "./utils/utils";
 import Card from "./components/Card/Card";
 
 const Main = () => {
