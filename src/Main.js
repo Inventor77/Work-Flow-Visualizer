@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaFolderPlus, FaTrash, FaBuffer, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { readData, deleteData } from "./utils/utils";
+import Card from "./components/Card/Card";
 
 const Main = () => {
 	const [charts, setCharts] = useState([]);
@@ -81,86 +82,55 @@ const Main = () => {
 
 	return (
 		<main>
-			<header className="top-nav">
+			<header className='top-nav'>
 				<div>
-					<Link to="/flow-chart" className="add-project">
+					<Link to='/flow-chart' className='add-project'>
 						<FaFolderPlus />
-						<span className="tab-text">New Project</span>
+						<span className='tab-text'>New Project</span>
 					</Link>
 				</div>
-				<div className="search-bar">
+				<div className='search-bar'>
 					<input
-						type="text"
-						placeholder="Search Projects"
+						type='text'
+						placeholder='Search Projects'
 						value={searchTerm}
 						onChange={handleChange}
 					/>
 				</div>
-				<div className="tab-container">
-					<Link to="/" className="tab active-tab">
+				<div className='tab-container'>
+					<Link to='/' className='tab active-tab'>
 						<FaBuffer />
-						<span className="tab-text"> Projects </span>
+						<span className='tab-text'> Projects </span>
 					</Link>
-					<Link to="/new-node" className="tab">
+					<Link to='/new-node' className='tab'>
 						<FaBuffer />
-						<span className="tab-text"> Nodes </span>
+						<span className='tab-text'> Nodes </span>
 					</Link>
 				</div>
 			</header>
-			<div className="project-dashboard">
-				<div className="title">
+			<div className='project-dashboard'>
+				<div className='title'>
 					<h3> Projects </h3>
 				</div>
 
-				<ul className="main-content" id="myUL">
+				<ul className='main-content' id='myUL'>
 					{isLoading && <h1 style={{ textAlign: "center" }}>Loading...</h1>}
 					{Object.keys(charts).map((id) => {
 						var d = new Date(charts[id].date);
 
 						return (
-							<li className="main-content-grid" key={id}>
-								<div className="project-info">
-									<div className="content">
-										<div className="title">{charts[id].name}</div>
-										<div className="project-date">
-											Edited on {`${d.toDateString()}`}
-										</div>
-										<div className="machine">{charts[id].machine}</div>
-										<div className="user-info">
-											<span className="user-name">User Name</span>
-										</div>
-									</div>
-									<div className="action-container">
-										<div>
-											<Link
-												to={{
-													pathname: "/edit",
-													state: `${charts[id].values}`,
-													id: `${chartsId[id]}`,
-													name: `${charts[id].name}`,
-												}}
-												className="view-project-btn"
-											>
-												View Project
-											</Link>
-										</div>
-										<div>
-											<FaTrash
-												onClick={() => {
-													deleteData("file", chartsId[id]).then(() => read());
-												}}
-												className="project-delete"
-											/>
-										</div>
-									</div>
-								</div>
-							</li>
+							<Card
+								projectTitle={charts[id].name}
+								date={d.toDateString()}
+								id={charts[id].id}
+								value={charts[id].values}
+							/>
 						);
 					})}
-					<li className="main-content-grid">
-						<Link to="/flow-chart" className="add-new-project">
+					<li className='main-content-grid'>
+						<Link to='/flow-chart' className='add-new-project'>
 							<FaPlus />
-							<span className="text">Add Project</span>
+							<span className='text'>Add Project</span>
 						</Link>
 					</li>
 				</ul>
