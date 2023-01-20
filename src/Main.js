@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { FaFolderPlus, FaTrash, FaBuffer, FaPlus } from "react-icons/fa";
+import { FaFolderPlus FaBuffer, FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { readData, deleteData } from "./utils/utils";
+import { readData } from "./utils/utils";
 import Card from "./components/Card/Card";
 
 const Main = () => {
@@ -68,9 +68,6 @@ const Main = () => {
 		li = ul.getElementsByTagName("li");
 		for (i = 0; i < li.length; i++) {
 			a = li[i];
-			// .querySelector(".project-info")
-			// .querySelector(".content")
-			// .querySelector(".machine");
 			txtValue = a.textContent || a.innerText;
 			if (txtValue.indexOf(filter) > -1) {
 				li[i].style.display = "";
@@ -117,7 +114,6 @@ const Main = () => {
 					{isLoading && <h1 style={{ textAlign: "center" }}>Loading...</h1>}
 					{Object.keys(charts).map((id) => {
 						var d = new Date(charts[id].date);
-
 						return (
 							<Card
 								projectTitle={charts[id].name}
