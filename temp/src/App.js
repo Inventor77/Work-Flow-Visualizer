@@ -4,7 +4,7 @@ import FlowChartType1 from "./components/Flow-Chart/Type1/index";
 import ExistingFlowChart from "./components/Flow-Chart/Existing-Node/type-1";
 import CreateNewNode from "./components/New-Node/create-node";
 import NewNode from "./components/New-Node/index";
-import Layout from "./Layout";
+import Layout from "../../src/Layout";
 
 function App() {
   return (
