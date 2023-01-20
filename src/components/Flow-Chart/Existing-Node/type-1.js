@@ -8,13 +8,13 @@ import {
 } from "react-icons/fa";
 
 import ReactFlow, {
-	ReactFlowProvider,
-	addEdge,
-	removeElements,
-	Controls,
-	Background,
-	MiniMap,
-} from "react-flow-renderer";
+  ReactFlowProvider,
+  addEdge,
+  removeElements,
+  Controls,
+  Background,
+  MiniMap,
+} from "reactflow";
 import Popup from "reactjs-popup";
 import CustomNode from "../CustomNodes/CustomNode";
 import CustomNode2 from "../CustomNodes/CustomNode2";

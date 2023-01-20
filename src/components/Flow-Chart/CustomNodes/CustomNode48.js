@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { Handle } from "react-flow-renderer";
+import { Handle } from "reactflow";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 
-import { Handle } from "react-flow-renderer";
+import { Handle } from "reactflow";
 
 export default memo(({ data }) => {
 	return (

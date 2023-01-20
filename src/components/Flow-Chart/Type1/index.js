@@ -8,13 +8,13 @@ import {
 } from "react-icons/fa";
 import { addData } from "../../../utils/utils";
 import ReactFlow, {
-	ReactFlowProvider,
-	addEdge,
-	removeElements,
-	Controls,
-	Background,
-	MiniMap,
-} from "react-flow-renderer";
+  ReactFlowProvider,
+  addEdge,
+  removeElements,
+  Controls,
+  Background,
+  MiniMap,
+} from "reactflow";
 import useEventListener from "@use-it/event-listener";
 import Popup from "reactjs-popup";
 import * as htmlToImage from "html-to-image";
