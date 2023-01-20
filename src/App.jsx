@@ -11,11 +11,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" component={Layout}></Route>
-        <Route exact path="/flow-chart" component={FlowChartType1}></Route>
-        <Route exact path="/edit" component={ExistingFlowChart}></Route>
-        <Route exact path="/new-node" component={NewNode}></Route>
-        <Route exact path="/create-node" component={CreateNewNode}></Route>
+        <Route exact path="/" element={Layout} />
+        <Route exact path="/flow-chart" element={FlowChartType1} />
+        <Route exact path="/edit" element={ExistingFlowChart} />
+        <Route exact path="/new-node" element={NewNode} />
+        <Route exact path="/create-node" element={CreateNewNode} />
       </Routes>
     </Router>
   );
