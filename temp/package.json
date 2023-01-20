@@ -4,8 +4,6 @@
 	"homepage": "./",
 	"private": true,
 	"dependencies": {
-		"@rooks/use-undo-state": "^4.11.0",
-		"@use-it/event-listener": "^0.1.6",
 		"re-resizable": "^6.9.0",
 		"react-rnd": "^10.2.4"
 	}
