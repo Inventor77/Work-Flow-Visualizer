@@ -6,10 +6,7 @@
 	"dependencies": {
 		"@rooks/use-undo-state": "^4.11.0",
 		"@use-it/event-listener": "^0.1.6",
-		"html-to-image": "^1.6.0",
-		"jspdf": "^2.3.1",
 		"re-resizable": "^6.9.0",
-		"react-pro-sidebar": "^0.4.4",
 		"react-rnd": "^10.2.4"
 	}
 }
