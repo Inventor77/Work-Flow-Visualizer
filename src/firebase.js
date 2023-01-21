@@ -2,12 +2,12 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyBpnyAOhGRyzO7o20nBhoVSnsEFg11cUFY",
-  authDomain: "visualiser-83148.firebaseapp.com",
-  projectId: "visualiser-83148",
-  storageBucket: "visualiser-83148.appspot.com",
-  messagingSenderId: "216546935300",
-  appId: "1:216546935300:web:b2c36d405023301de02b51",
+  apiKey: "AIzaSyBYrFRjXL57ddhTFbcDiZ97bI6tFo6qLWc",
+  authDomain: "work-flow-visualizer.firebaseapp.com",
+  projectId: "work-flow-visualizer",
+  storageBucket: "work-flow-visualizer.appspot.com",
+  messagingSenderId: "5610493242",
+  appId: "1:5610493242:web:1341548645554704302c03",
 });
 
 export const db = app.firestore();
