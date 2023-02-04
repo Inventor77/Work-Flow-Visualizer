@@ -21,18 +21,20 @@ const NewNode = () => {
 	const id = location.id;
 	const [docId, setDocId] = useState();
 	const [nodes, setNodes] = useState(elemen);
-	const text = elemen.textField === "true" ? true : false;
-	const area = elemen.textArea === "true" ? true : false;
-	const image = elemen.Image === "true" ? true : false;
-	const text2 = elemen.textField2 === "true" ? true : false;
-	const area2 = elemen.textArea2 === "true" ? true : false;
-	const image2 = elemen.Image2 === "true" ? true : false;
-	const text3 = elemen.textField3 === "true" ? true : false;
-	const area3 = elemen.textArea3 === "true" ? true : false;
-	const image3 = elemen.Image3 === "true" ? true : false;
-	const code = elemen.code === "true" ? true : false;
-	const code2 = elemen.code2 === "true" ? true : false;
-	const code3 = elemen.code3 === "true" ? true : false;
+
+	const text = elemen?.textField ? true : false;
+	const text2 = elemen?.textField2 ? true : false;
+	const text3 = elemen?.textField3 ? true : false;
+	const area = elemen?.textArea ? true : false;
+	const area2 = elemen?.textArea2 ? true : false;
+	const area3 = elemen?.textArea3 ? true : false;
+	const image = elemen?.Image ? true : false;
+	const image2 = elemen?.Image2 ? true : false;
+	const image3 = elemen?.Image3 ? true : false;
+	const code = elemen?.code ? true : false;
+	const code2 = elemen?.code2 ? true : false;
+	const code3 = elemen?.code3 ? true : false;
+
 	const [nodeTextField, setNodeTextField] = useState(text);
 	const [nodeTextField2, setNodeTextField2] = useState(text2);
 	const [nodeTextField3, setNodeTextField3] = useState(text3);
@@ -99,7 +101,6 @@ const NewNode = () => {
 			console.log("error");
 		} else {
 			updateNode(docId[id], data);
-			// console.log();
 		}
 	}, [nodes]);
 
@@ -139,7 +140,7 @@ const NewNode = () => {
 														if (nodeTextField === false) {
 															setNodes((el) => ({
 																...el,
-																textField: "true",
+																textField: true,
 															}));
 														}
 													} else {
@@ -156,7 +157,7 @@ const NewNode = () => {
 															setNodeTextField2(true);
 															setNodes((el) => ({
 																...el,
-																textField2: "true",
+																textField2: true,
 															}));
 														}
 													} else {
@@ -173,7 +174,7 @@ const NewNode = () => {
 															setNodeTextField3(true);
 															setNodes((el) => ({
 																...el,
-																textField3: "true",
+																textField3: true,
 															}));
 														}
 													} else {
@@ -198,7 +199,7 @@ const NewNode = () => {
 														if (nodeTextArea === false) {
 															setNodes((el) => ({
 																...el,
-																textArea: "true",
+																textArea: true,
 															}));
 														}
 													} else {
@@ -215,7 +216,7 @@ const NewNode = () => {
 															setNodeTextArea2(true);
 															setNodes((el) => ({
 																...el,
-																textArea2: "true",
+																textArea2: true,
 															}));
 														}
 													} else {
@@ -232,7 +233,7 @@ const NewNode = () => {
 															setNodeTextArea3(true);
 															setNodes((el) => ({
 																...el,
-																textArea3: "true",
+																textArea3: true,
 															}));
 														}
 													} else {
@@ -257,7 +258,7 @@ const NewNode = () => {
 														if (nodeImage === false) {
 															setNodes((el) => ({
 																...el,
-																Image: "true",
+																Image: true,
 															}));
 														}
 													} else {
@@ -274,7 +275,7 @@ const NewNode = () => {
 															setNodeImage2(true);
 															setNodes((el) => ({
 																...el,
-																Image2: "true",
+																Image2: true,
 															}));
 														}
 													} else {
@@ -291,7 +292,7 @@ const NewNode = () => {
 															setNodeImage3(true);
 															setNodes((el) => ({
 																...el,
-																Image3: "true",
+																Image3: true,
 															}));
 														}
 													} else {
@@ -316,7 +317,7 @@ const NewNode = () => {
 														if (codeNode === false) {
 															setNodes((el) => ({
 																...el,
-																code: "true",
+																code: true,
 															}));
 														}
 													} else {
@@ -333,7 +334,7 @@ const NewNode = () => {
 															setCodeNode2(true);
 															setNodes((el) => ({
 																...el,
-																code2: "true",
+																code2: true,
 															}));
 														}
 													} else {
@@ -350,7 +351,7 @@ const NewNode = () => {
 															setCodeNode3(true);
 															setNodes((el) => ({
 																...el,
-																code3: "true",
+																code3: true,
 															}));
 														}
 													} else {
@@ -449,7 +450,7 @@ const NewNode = () => {
 					<div className="create-node-content">
 						<div className="create-node-content-list">
 							<div className="node-fields">
-								{nodes.textField === "true" ? (
+								{nodes?.textField ? (
 									<div className="div-node">
 										<h3>Text Field</h3>
 										<button
@@ -468,7 +469,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.textField2 === "true" ? (
+								{nodes?.textField2 ? (
 									<div className="div-node">
 										<h3>2nd Text Field</h3>
 										<button
@@ -487,7 +488,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.textField3 === "true" ? (
+								{nodes?.textField3 ? (
 									<div className="div-node">
 										<h3>3rd Text Field</h3>
 										<button
@@ -506,7 +507,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.textArea === "true" ? (
+								{nodes?.textArea ? (
 									<div className="div-node">
 										<h3>Text Area</h3>
 										<button
@@ -525,7 +526,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.textArea2 === "true" ? (
+								{nodes?.textArea2 ? (
 									<div className="div-node">
 										<h3>2nd Text Area</h3>
 										<button
@@ -544,7 +545,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.textArea3 === "true" ? (
+								{nodes?.textArea3 ? (
 									<div className="div-node">
 										<h3>3rd Text Area</h3>
 										<button
@@ -563,7 +564,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.Image === "true" ? (
+								{nodes?.Image ? (
 									<div className="div-node">
 										<h3>Image</h3>
 										<button
@@ -582,7 +583,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.Image2 === "true" ? (
+								{nodes?.Image2 ? (
 									<div className="div-node">
 										<h3>2nd Image</h3>
 										<button
@@ -601,7 +602,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.Image3 === "true" ? (
+								{nodes?.Image3 ? (
 									<div className="div-node">
 										<h3>3rd Image</h3>
 										<button
@@ -620,7 +621,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.code === "true" ? (
+								{nodes?.code ? (
 									<div className="div-node">
 										<h3>Code Area</h3>
 										<button
@@ -639,7 +640,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.code2 === "true" ? (
+								{nodes?.code2 ? (
 									<div className="div-node">
 										<h3>2nd Code Area</h3>
 										<button
@@ -658,7 +659,7 @@ const NewNode = () => {
 								)}
 							</div>
 							<div className="node-fields">
-								{nodes.code3 === "true" ? (
+								{nodes?.code3 ? (
 									<div className="div-node">
 										<h3>3rd Code Area</h3>
 										<button
