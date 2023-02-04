@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import {
-	FaAngleDoubleLeft,
-	FaAngleDoubleRight,
-	FaUndo,
-	FaRegFilePdf,
-	FaRegFileAlt,
+  FaAngleDoubleLeft,
+  FaAngleDoubleRight,
+  FaUndo,
+  FaRegFilePdf,
+  FaRegFileAlt,
 } from "react-icons/fa";
 
 import ReactFlow, {
@@ -75,54 +75,54 @@ import Sidebar from "../Type1/Sidebar";
 import { updateData } from "../../../utils/utils";
 
 const nodeTypes = {
-	selectorNode: CustomNode,
-	customNode: CustomNode2,
-	nodeWithImageText: CustomNode3,
-	nodeWithImageOnly: CustomNode4,
-	nodeWithTextAndArea: CustomNode5,
-	mainCustomNode: CustomNode6,
-	nodeWith3Text: CustomNode7,
-	nodeWith2TextArea: CustomNode8,
-	nodeWith3TextArea: CustomNode9,
-	nodeWith3Image: CustomNode10,
-	nodeWith2Image: CustomNode11,
-	nodeWith2Field1Area: CustomNode12,
-	nodeWith2Field1Image: CustomNode13,
-	nodeWith2Area1Field: CustomNode14,
-	nodeWith2Area1Image: CustomNode15,
-	nodeWith2Image1Field: CustomNode16,
-	nodeWith2Image1Area: CustomNode17,
-	nodeWithCode: CustomNode18,
-	nodeWithOnlyText: CustomNode19,
-	squareNode: CustomNode20,
-	circleNode: CustomNode21,
-	codethree: CustomNode22,
-	oneTextTwoCode: CustomNode23,
-	oneAreaTwoCode: CustomNode24,
-	oneImageTwoCode: CustomNode25,
-	twoTextOneCode: CustomNode26,
-	twoAreaOneCode: CustomNode27,
-	twoImageOneCode: CustomNode28,
-	oneConeAoneI: CustomNode29,
-	oneConeToneI: CustomNode30,
-	oneConeAoneT: CustomNode31,
-	onlyCode: CustomNode32,
-	oneCodeoneImage: CustomNode33,
-	oneCodeoneArea: CustomNode34,
-	fourElements: CustomNode35,
-	twoTexttwoArea: CustomNode36,
-	twoTexttwoImage: CustomNode37,
-	twoTexttwoCode: CustomNode38,
-	twoAreatwoCode: CustomNode39,
-	twoAreatwoImage: CustomNode40,
-	twoImagetwoCode: CustomNode41,
-	twoTextOneAreaOneImage: CustomNode42,
-	twoTextOneAreaOneCode: CustomNode43,
-	twoTextOneImageOneCode: CustomNode44,
-	twoImageoneTextoneArea: CustomNode45,
-	twoImageoneTextoneCode: CustomNode46,
-	twoCodeoneTextoneArea: CustomNode47,
-	twoCodeoneTextoneImage: CustomNode48,
+  selectorNode: CustomNode,
+  customNode: CustomNode2,
+  nodeWithImageText: CustomNode3,
+  nodeWithImageOnly: CustomNode4,
+  nodeWithTextAndArea: CustomNode5,
+  mainCustomNode: CustomNode6,
+  nodeWith3Text: CustomNode7,
+  nodeWith2TextArea: CustomNode8,
+  nodeWith3TextArea: CustomNode9,
+  nodeWith3Image: CustomNode10,
+  nodeWith2Image: CustomNode11,
+  nodeWith2Field1Area: CustomNode12,
+  nodeWith2Field1Image: CustomNode13,
+  nodeWith2Area1Field: CustomNode14,
+  nodeWith2Area1Image: CustomNode15,
+  nodeWith2Image1Field: CustomNode16,
+  nodeWith2Image1Area: CustomNode17,
+  nodeWithCode: CustomNode18,
+  nodeWithOnlyText: CustomNode19,
+  squareNode: CustomNode20,
+  circleNode: CustomNode21,
+  codethree: CustomNode22,
+  oneTextTwoCode: CustomNode23,
+  oneAreaTwoCode: CustomNode24,
+  oneImageTwoCode: CustomNode25,
+  twoTextOneCode: CustomNode26,
+  twoAreaOneCode: CustomNode27,
+  twoImageOneCode: CustomNode28,
+  oneConeAoneI: CustomNode29,
+  oneConeToneI: CustomNode30,
+  oneConeAoneT: CustomNode31,
+  onlyCode: CustomNode32,
+  oneCodeoneImage: CustomNode33,
+  oneCodeoneArea: CustomNode34,
+  fourElements: CustomNode35,
+  twoTexttwoArea: CustomNode36,
+  twoTexttwoImage: CustomNode37,
+  twoTexttwoCode: CustomNode38,
+  twoAreatwoCode: CustomNode39,
+  twoAreatwoImage: CustomNode40,
+  twoImagetwoCode: CustomNode41,
+  twoTextOneAreaOneImage: CustomNode42,
+  twoTextOneAreaOneCode: CustomNode43,
+  twoTextOneImageOneCode: CustomNode44,
+  twoImageoneTextoneArea: CustomNode45,
+  twoImageoneTextoneCode: CustomNode46,
+  twoCodeoneTextoneArea: CustomNode47,
+  twoCodeoneTextoneImage: CustomNode48,
 };
 
 const DnDFlow = (props) => {
@@ -240,12 +240,8 @@ const DnDFlow = (props) => {
             radius: 8,
             label: "Text Field",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -266,12 +262,8 @@ const DnDFlow = (props) => {
             radius: 8,
             label: "Text Field",
             textarea: "Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -293,9 +285,7 @@ const DnDFlow = (props) => {
             label: "Text Field",
             source: `${imageUrl}`,
             source2: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -338,9 +328,7 @@ const DnDFlow = (props) => {
             label: "Text Field",
             label2: "2nd Text Field",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -384,9 +372,7 @@ const DnDFlow = (props) => {
             label: "Text Field",
             label2: "2nd Text Field",
             textarea: "Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -407,12 +393,8 @@ const DnDFlow = (props) => {
             radius: 8,
             textarea: "Text Area",
             textarea2: "2nd Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -477,12 +459,8 @@ const DnDFlow = (props) => {
             radius: 8,
             source: `${imageUrl}`,
             source2: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -525,12 +503,8 @@ const DnDFlow = (props) => {
             radius: 8,
             label: "Text Field",
             label2: "2nd Text Field",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -552,9 +526,7 @@ const DnDFlow = (props) => {
             label: "Text Field",
             textarea: "Text Area",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -573,9 +545,7 @@ const DnDFlow = (props) => {
           data: {
             radius: 8,
             background: "#fff",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -595,9 +565,7 @@ const DnDFlow = (props) => {
             radius: 8,
             background: "#fff",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -617,9 +585,7 @@ const DnDFlow = (props) => {
             radius: 8,
             background: "#fff",
             textarea: "Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -638,15 +604,9 @@ const DnDFlow = (props) => {
           data: {
             radius: 8,
             background: "#fff",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun2(){
-    name = "Hello"
-  }`,
-            code3: `function fun3(){
-    name = "Bye!"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
+            code3: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -666,12 +626,8 @@ const DnDFlow = (props) => {
             radius: 8,
             background: "#fff",
             label: "Text Field",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun2(){
-    name = "Hello"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -691,12 +647,8 @@ const DnDFlow = (props) => {
             radius: 8,
             background: "#fff",
             textarea: "Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun2(){
-    name = "Hello"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -716,12 +668,8 @@ const DnDFlow = (props) => {
             radius: 8,
             background: "#fff",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
-            code2: `function fun2(){
-    name = "Hello"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
+            code2: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -742,9 +690,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             label: "Text Field",
             label2: "2nd Text Field",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -765,9 +711,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             textarea: "Text Area",
             textarea2: "2nd Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -788,9 +732,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             source: `${imageUrl}`,
             source2: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -811,9 +753,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             textarea: "Text Area",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -834,9 +774,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             label: "Text Field",
             textarea: "Text Area",
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -857,9 +795,7 @@ const DnDFlow = (props) => {
             background: "#fff",
             label: "Text Field",
             source: `${imageUrl}`,
-            code: `function fun(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
           style: {
             width: "255px",
@@ -883,9 +819,7 @@ const DnDFlow = (props) => {
             settingWidth: callbackFunction,
             settingHeight: callbackFunction2,
             background: "#fff",
-            code: `function daya(){
-    name = "Daya"
-  }`,
+            code: `function testFunction( ) { let name = "Inventor" }`,
           },
         })
       );
@@ -2653,9 +2587,8 @@ const DnDFlow = (props) => {
           </div>
 
           <aside
-            className={`${
-              toggle ? "toggle-sidebar project-sidebar" : "project-sidebar"
-            }`}
+            className={`${toggle ? "toggle-sidebar project-sidebar" : "project-sidebar"
+              }`}
           >
             {showEdgeProperties ? (
               <div>
