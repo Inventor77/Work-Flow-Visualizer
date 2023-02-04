@@ -141,40 +141,40 @@ const NewNode = () => {
 									{Object.keys(nodes).map((id) => {
 										const node = JSON.stringify(nodes[id]);
 										var noOfFields = 0;
-										if (nodes[id].Image === "true") {
+										if (nodes[id].Image) {
 											noOfFields++;
 										}
-										if (nodes[id].textArea === "true") {
+										if (nodes[id].textArea) {
 											noOfFields++;
 										}
-										if (nodes[id].textField === "true") {
+										if (nodes[id].textField) {
 											noOfFields++;
 										}
-										if (nodes[id].Image2 === "true") {
+										if (nodes[id].Image2) {
 											noOfFields++;
 										}
-										if (nodes[id].textArea2 === "true") {
+										if (nodes[id].textArea2) {
 											noOfFields++;
 										}
-										if (nodes[id].textField2 === "true") {
+										if (nodes[id].textField2) {
 											noOfFields++;
 										}
-										if (nodes[id].Image3 === "true") {
+										if (nodes[id].Image3) {
 											noOfFields++;
 										}
-										if (nodes[id].textArea3 === "true") {
+										if (nodes[id].textArea3) {
 											noOfFields++;
 										}
-										if (nodes[id].textField3 === "true") {
+										if (nodes[id].textField3) {
 											noOfFields++;
 										}
-										if (nodes[id].code === "true") {
+										if (nodes[id].code) {
 											noOfFields++;
 										}
-										if (nodes[id].code2 === "true") {
+										if (nodes[id].code2) {
 											noOfFields++;
 										}
-										if (nodes[id].code3 === "true") {
+										if (nodes[id].code3) {
 											noOfFields++;
 										}
 										return (
