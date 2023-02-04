@@ -32,9 +32,7 @@ const Sidebar = () => {
 		event.dataTransfer.effectAllowed = "move";
 	};
 
-	const codeString = `function test( ) {
-    String name = "Daya"
-  }`;
+	const codeString = `function testFunction( ) { let name = "Inventor" }`;
 
 	return (
 		<aside
