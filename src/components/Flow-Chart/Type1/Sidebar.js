@@ -38,11 +38,10 @@ const Sidebar = () => {
 
 	return (
 		<aside
-			className={`${
-				toggle
-					? "toggle-sidebar project-sidebar node-sidebar"
-					: "project-sidebar node-sidebar"
-			}`}
+			className={`${toggle
+				? "toggle-sidebar project-sidebar node-sidebar"
+				: "project-sidebar node-sidebar"
+				}`}
 		>
 			<div>
 				<div
@@ -97,212 +96,124 @@ const Sidebar = () => {
 						var classname = "custom";
 						var designname = "rectangleWithImageText";
 						var nodeType = "";
-						if (
-							elemen.textField === "true" &&
-							elemen.textArea === "true" &&
-							elemen.Image === "true"
-						) {
+						if (elemen.textField && elemen.textArea && elemen.Image) {
 							classname = "custom";
 							designname = "rectangleWithImageText";
 							nodeType = "customNode";
 						}
-						if (
-							elemen.textField === "true" &&
-							elemen.Image === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.textField && elemen.Image && Object.keys(elemen).length === 5) {
 							classname = "image";
 							designname = "rectangleWithImage";
 							nodeType = "selectorNode";
 						}
-						if (
-							elemen.textArea === "true" &&
-							elemen.Image === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.textArea && elemen.Image && Object.keys(elemen).length === 5) {
 							classname = "custom-2";
 							designname = "rectangleWithImageArea";
 							nodeType = "nodeWithImageText";
 						}
 
-						if (
-							elemen.textArea === "true" &&
-							Object.keys(elemen).length === 4
+						if (elemen.textArea && Object.keys(elemen).length === 4
 						) {
 							classname = "image";
 							designname = "text";
 							nodeType = "default";
 						}
 
-						if (elemen.Image === "true" && Object.keys(elemen).length === 4) {
+						if (elemen.Image && Object.keys(elemen).length === 4) {
 							classname = "only-image";
 							designname = "onlyImage";
 							nodeType = "nodeWithImageOnly";
 						}
 
-						if (
-							elemen.textField === "true" &&
-							elemen.textArea === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.textField && elemen.textArea && Object.keys(elemen).length === 5) {
 							classname = "image";
 							designname = "nodeTextAndArea";
 							nodeType = "nodeWithTextAndArea";
 						}
-						if (
-							elemen.textField === "true" &&
-							Object.keys(elemen).length === 4
-						) {
+						if (elemen.textField && Object.keys(elemen).length === 4) {
 							classname = "dndnode output";
 							designname = "text";
 							nodeType = "default";
 						}
-						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.textField && elemen.textField2 && Object.keys(elemen).length === 5) {
 							classname = "textfield2";
 							designname = "text2";
 							nodeType = "mainCustomNode";
 						}
-						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.textField3 === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textField && elemen.textField2 && elemen.textField3 && Object.keys(elemen).length === 6) {
 							classname = "textfield3";
 							designname = "text3";
 							nodeType = "nodeWith3Text";
 						}
-						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.textArea && elemen.textArea2 && Object.keys(elemen).length === 5) {
 							classname = "textarea2";
 							designname = "textarea2";
 							nodeType = "nodeWith2TextArea";
 						}
-						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.textArea3 === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textArea && elemen.textArea2 && elemen.textArea3 && Object.keys(elemen).length === 6) {
 							classname = "textarea3";
 							designname = "textarea3";
 							nodeType = "nodeWith3TextArea";
 						}
 
-						if (
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
-							elemen.Image3 === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.Image && elemen.Image2 && elemen.Image3 && Object.keys(elemen).length === 6) {
 							classname = "image3";
 							designname = "image3";
 							nodeType = "nodeWith3Image";
 						}
 
-						if (
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
-							Object.keys(elemen).length === 5
-						) {
+						if (elemen.Image && elemen.Image2 && Object.keys(elemen).length === 5) {
 							classname = "image3";
 							designname = "image2";
 							nodeType = "nodeWith2Image";
 						}
-						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.textArea === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textField && elemen.textField2 && elemen.textArea && Object.keys(elemen).length === 6) {
 							designname = "field2area1";
 							nodeType = "nodeWith2Field1Area";
 						}
-						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.Image === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textField && elemen.textField2 && elemen.Image && Object.keys(elemen).length === 6) {
 							designname = "field2image1";
 							nodeType = "nodeWith2Field1Image";
 						}
-						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.textField === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textArea && elemen.textArea2 && elemen.textField && Object.keys(elemen).length === 6) {
 							classname = "area2field1";
 							designname = "area2field1";
 							nodeType = "nodeWith2Area1Field";
 						}
 
-						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.Image === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.textArea && elemen.textArea2 && elemen.Image && Object.keys(elemen).length === 6) {
 							classname = "area2image1";
 							designname = "area2image1";
 							nodeType = "nodeWith2Area1Image";
 						}
 
-						if (
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
-							elemen.textField === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.Image && elemen.Image2 && elemen.textField && Object.keys(elemen).length === 6) {
 							classname = "image2field1";
 							designname = "image2field1";
 							nodeType = "nodeWith2Image1Field";
 						}
 
-						if (
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
-							elemen.textArea === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.Image && elemen.Image2 && elemen.textArea && Object.keys(elemen).length === 6) {
 							classname = "image2field1";
 							designname = "image2area1";
 							nodeType = "nodeWith2Image1Area";
 						}
 
-						if (
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
-							elemen.code3 === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.code && elemen.code2 && elemen.code3 && Object.keys(elemen).length === 6) {
 							classname = "code3";
 							designname = "threecode";
 							nodeType = "codethree";
 						}
 
-						if (
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
-							elemen.textField === "true" &&
-							Object.keys(elemen).length === 6
-						) {
+						if (elemen.code && elemen.code2 && elemen.textField && Object.keys(elemen).length === 6) {
 							classname = "code4";
 							designname = "oneTextTwoCode";
 							nodeType = "oneTextTwoCode";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
-							elemen.textArea === "true" &&
+							elemen.code &&
+							elemen.code2 &&
+							elemen.textArea &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code4";
@@ -311,9 +222,9 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
-							elemen.Image === "true" &&
+							elemen.code &&
+							elemen.code2 &&
+							elemen.Image &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code4";
@@ -321,9 +232,9 @@ const Sidebar = () => {
 							nodeType = "oneImageTwoCode";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
+							elemen.code &&
+							elemen.textField &&
+							elemen.textField2 &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code5";
@@ -331,9 +242,9 @@ const Sidebar = () => {
 							nodeType = "twoTextOneCode";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
+							elemen.code &&
+							elemen.textArea &&
+							elemen.textArea2 &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code4";
@@ -341,9 +252,9 @@ const Sidebar = () => {
 							nodeType = "twoAreaOneCode";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.code &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code4";
@@ -351,9 +262,9 @@ const Sidebar = () => {
 							nodeType = "twoImageOneCode";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.textArea === "true" &&
-							elemen.Image === "true" &&
+							elemen.code &&
+							elemen.textArea &&
+							elemen.Image &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code6";
@@ -361,9 +272,9 @@ const Sidebar = () => {
 							nodeType = "oneConeAoneI";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.textField === "true" &&
-							elemen.Image === "true" &&
+							elemen.code &&
+							elemen.textField &&
+							elemen.Image &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code6";
@@ -372,9 +283,9 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.code === "true" &&
-							elemen.textField === "true" &&
-							elemen.textArea === "true" &&
+							elemen.code &&
+							elemen.textField &&
+							elemen.textArea &&
 							Object.keys(elemen).length === 6
 						) {
 							classname = "code6";
@@ -382,15 +293,15 @@ const Sidebar = () => {
 							nodeType = "oneConeAoneT";
 						}
 
-						if (elemen.code === "true" && Object.keys(elemen).length === 4) {
+						if (elemen.code && Object.keys(elemen).length === 4) {
 							classname = "code";
 							designname = "onlyCode";
 							nodeType = "onlyCode";
 						}
 
 						if (
-							elemen.code === "true" &&
-							elemen.textArea === "true" &&
+							elemen.code &&
+							elemen.textArea &&
 							Object.keys(elemen).length === 5
 						) {
 							classname = "code8";
@@ -399,8 +310,8 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
+							elemen.code &&
+							elemen.Image &&
 							Object.keys(elemen).length === 5
 						) {
 							classname = "code8";
@@ -409,10 +320,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.code === "true" &&
-							elemen.textField === "true" &&
-							elemen.textArea === "true" &&
-							elemen.Image === "true" &&
+							elemen.code &&
+							elemen.textField &&
+							elemen.textArea &&
+							elemen.Image &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -421,10 +332,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.textArea &&
+							elemen.textArea2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -433,10 +344,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -445,10 +356,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.code &&
+							elemen.code2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -457,10 +368,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
+							elemen.textArea &&
+							elemen.textArea2 &&
+							elemen.code &&
+							elemen.code2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -469,10 +380,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.textArea &&
+							elemen.textArea2 &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code11";
@@ -480,10 +391,10 @@ const Sidebar = () => {
 							nodeType = "twoAreatwoImage";
 						}
 						if (
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.code &&
+							elemen.code2 &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code11";
@@ -492,10 +403,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.Image === "true" &&
-							elemen.textArea === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.Image &&
+							elemen.textArea &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -504,10 +415,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.code === "true" &&
-							elemen.textArea === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.code &&
+							elemen.textArea &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -516,10 +427,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textField2 === "true" &&
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
+							elemen.textField &&
+							elemen.textField2 &&
+							elemen.code &&
+							elemen.Image &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -528,10 +439,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
+							elemen.textArea &&
+							elemen.textArea2 &&
+							elemen.code &&
+							elemen.Image &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -540,10 +451,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.code === "true" &&
-							elemen.textField === "true" &&
+							elemen.textArea &&
+							elemen.textArea2 &&
+							elemen.code &&
+							elemen.textField &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -552,10 +463,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textArea2 === "true" &&
-							elemen.Image === "true" &&
-							elemen.textField === "true" &&
+							elemen.textArea &&
+							elemen.textArea2 &&
+							elemen.Image &&
+							elemen.textField &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -564,10 +475,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.textField === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.textArea &&
+							elemen.textField &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -576,10 +487,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.textArea &&
+							elemen.code &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -588,10 +499,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.code === "true" &&
-							elemen.Image === "true" &&
-							elemen.Image2 === "true" &&
+							elemen.textField &&
+							elemen.code &&
+							elemen.Image &&
+							elemen.Image2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -600,10 +511,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.textArea === "true" &&
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
+							elemen.textField &&
+							elemen.textArea &&
+							elemen.code &&
+							elemen.code2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -612,10 +523,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textField === "true" &&
-							elemen.Image === "true" &&
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
+							elemen.textField &&
+							elemen.Image &&
+							elemen.code &&
+							elemen.code2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code10";
@@ -624,10 +535,10 @@ const Sidebar = () => {
 						}
 
 						if (
-							elemen.textArea === "true" &&
-							elemen.Image === "true" &&
-							elemen.code === "true" &&
-							elemen.code2 === "true" &&
+							elemen.textArea &&
+							elemen.Image &&
+							elemen.code &&
+							elemen.code2 &&
 							Object.keys(elemen).length === 7
 						) {
 							classname = "code11";
@@ -651,40 +562,40 @@ const Sidebar = () => {
 								draggable
 								key={elemen.id}
 							>
-								{elemen.textField === "true" ? <p>{elemen.name}</p> : ""}
-								{elemen.textField2 === "true" ? <p>2nd Text Field</p> : ""}
-								{elemen.textField3 === "true" ? <p>3rd Text Field</p> : ""}
-								{elemen.Image === "true" ? (
+								{elemen.textField ? <p>{elemen.name}</p> : ""}
+								{elemen.textField2 ? <p>2nd Text Field</p> : ""}
+								{elemen.textField3 ? <p>3rd Text Field</p> : ""}
+								{elemen.Image ? (
 									<img src="https://source.unsplash.com/random" alt="jcj" />
 								) : (
 									""
 								)}
-								{elemen.Image2 === "true" ? (
+								{elemen.Image2 ? (
 									<img src="https://source.unsplash.com/random" alt="jcj" />
 								) : (
 									""
 								)}
-								{elemen.Image3 === "true" ? (
+								{elemen.Image3 ? (
 									<img src="https://source.unsplash.com/random" alt="jcj" />
 								) : (
 									""
 								)}
-								{elemen.textArea === "true" ? (
+								{elemen.textArea ? (
 									<textarea rows="3" placeholder="Text Area"></textarea>
 								) : (
 									""
 								)}
-								{elemen.textArea2 === "true" ? (
+								{elemen.textArea2 ? (
 									<textarea rows="3" placeholder="Text Area"></textarea>
 								) : (
 									""
 								)}
-								{elemen.textArea3 === "true" ? (
+								{elemen.textArea3 ? (
 									<textarea rows="3" placeholder="Text Area"></textarea>
 								) : (
 									""
 								)}
-								{elemen.code === "true" ? (
+								{elemen.code ? (
 									<SyntaxHighlighter
 										wrapLines={true}
 										showLineNumbers={true}
@@ -697,7 +608,7 @@ const Sidebar = () => {
 								) : (
 									""
 								)}
-								{elemen.code2 === "true" ? (
+								{elemen.code2 ? (
 									<SyntaxHighlighter
 										wrapLines={true}
 										showLineNumbers={true}
@@ -710,7 +621,7 @@ const Sidebar = () => {
 								) : (
 									""
 								)}
-								{elemen.code3 === "true" ? (
+								{elemen.code3 ? (
 									<SyntaxHighlighter
 										wrapLines={true}
 										showLineNumbers={true}
